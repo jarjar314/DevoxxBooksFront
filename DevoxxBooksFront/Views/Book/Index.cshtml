@@ -1,0 +1,35 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model List<BookModel>
+
+<h1>Listes des livres en stock</h1>
+<div>
+    @foreach(var cm in @Model) {
+        <div class="row">
+            <div class="col-md-12">
+                <h2> @cm.BookTitle </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                Id du livre @cm.BookId
+            </div>
+            <div class="col-md-6">
+                Type du livre @cm.BookType
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                Date de parution @cm.BookPublication
+            </div>
+            <div class="col-md-6">
+            Nom de l'auteur @cm.AuthorName
+            </div>
+        </div>
+
+        @Html.ActionLink("Suppression du livre", "Delete","Book", new { bookId = cm.BookId })
+    }
+</div>
+@Html.ActionLink("Ajout d'un nouveau livre", "Create", "Book")

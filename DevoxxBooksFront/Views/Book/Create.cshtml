@@ -1,0 +1,42 @@
+@model BookModel
+@using(Html.BeginForm())
+{
+    <fieldset>
+        <legend>Livre</legend>
+    
+    <div class="editor-label">
+        @Html.LabelFor(model => model.BookTitle)
+    </div>
+
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.BookTitle)
+    </div>
+       
+    <div class="editor-label">
+        @Html.LabelFor(model => model.BookType)
+    </div>
+
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.BookType)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.AuthorName)
+    </div>
+
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.AuthorName)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.BookPublication)
+    </div>
+
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.BookPublication)
+    </div>
+
+    <input type="submit" value="Ajouter un livre"/>
+    </fieldset>
+    
+}
