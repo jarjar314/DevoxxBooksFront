@@ -6,30 +6,14 @@
 <h1>Listes des livres en stock</h1>
 <div>
     @foreach(var cm in @Model) {
-        <div class="row">
-            <div class="col-md-12">
-                <h2> @cm.BookTitle </h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                Id du livre @cm.BookId
-            </div>
-            <div class="col-md-6">
-                Type du livre @cm.BookType
-            </div>
-        </div>
+        <!-- 
 
-        <div class="row">
-            <div class="col-md-6">
-                Date de parution @cm.BookPublication
-            </div>
-            <div class="col-md-6">
-            Nom de l'auteur @cm.AuthorName
-            </div>
-        </div>
-
-        @Html.ActionLink("Suppression du livre", "Delete","Book", new { bookId = cm.BookId })
+            Afficher comme vous le voulez les propriétés de votre objet en mettant sous cette forme 
+            cm.Property où Property est une propriété de votre modèle
+        -->
+        <!-- utiliser ActionLink pour faire un lien vers l'action de suppression avec quatres arguments 
+        Le libellé de votre lien, l'action du controller, le nom de votre controller et  "new { bookId = cm.PropertyId }" 
+        où PropertyId est le nom de la propriété correspondant à l'id de votre model -->
     }
 </div>
-@Html.ActionLink("Ajout d'un nouveau livre", "Create", "Book")
+ <!-- utiliser ActionLink pour faire un lien vers l'action d'ajout -->

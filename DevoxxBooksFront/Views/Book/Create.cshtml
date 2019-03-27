@@ -4,37 +4,18 @@
     <fieldset>
         <legend>Livre</legend>
     
-    <div class="editor-label">
-        @Html.LabelFor(model => model.BookTitle)
+    //Faire sous cette forme pour toutes les propriétés de votre objet sauf pour la partie ID 
+    //remplacer le PropertyOfObject par le nom de la propriété de votre model
+
+    <!-- <div class="editor-label">
+        @Html.LabelFor(model => model.PropertyOfObject)
     </div>
 
     <div class="editor-field">
-        @Html.TextBoxFor(model => model.BookTitle)
+        @Html.TextBoxFor(model => model.PropertyOfObject)
     </div>
-       
-    <div class="editor-label">
-        @Html.LabelFor(model => model.BookType)
-    </div>
-
-    <div class="editor-field">
-        @Html.TextBoxFor(model => model.BookType)
-    </div>
-
-    <div class="editor-label">
-        @Html.LabelFor(model => model.AuthorName)
-    </div>
-
-    <div class="editor-field">
-        @Html.TextBoxFor(model => model.AuthorName)
-    </div>
-
-    <div class="editor-label">
-        @Html.LabelFor(model => model.BookPublication)
-    </div>
-
-    <div class="editor-field">
-        @Html.TextBoxFor(model => model.BookPublication)
-    </div>
+        -->
+    
 
     <input type="submit" value="Ajouter un livre"/>
     </fieldset>
